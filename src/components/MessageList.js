@@ -1,24 +1,24 @@
-import React, { Component, PropTypes } from 'react';
-import MessageItem from './MessageItem';
+import React, { Component } from 'react';
 
-export default class Footer extends Component {
-  static propTypes = {
-    threads: PropTypes.array.isRequired,
-    index: PropTypes.number.isRequired
-  }
-
+export default class MessageList extends Component {
   render() {
-    const { threads, index } = this.props;
-    const messages = threads[index].messages;
     return (
       <div>
-        {messages.map((message, id) => {
-          return (
-            <MessageItem key={id}
-                         fromMe={message.fromMe}
-                         text={message.text} />
-          );
-        })}
+          <div className="message-item message-from-other">
+              <span>對啊</span>
+          </div>
+          <div className="message-item message-from-other">
+              <span>試著</span>
+          </div>
+          <div className="message-item message-from-other">
+              <span>靠左邊嘛</span>
+          </div>
+          <div className="message-item message-from-me">
+              <span>換我了</span>
+          </div>
+          <div className="message-item message-from-me">
+              <span>有看到嗎</span>
+          </div>
       </div>
     );
   }
