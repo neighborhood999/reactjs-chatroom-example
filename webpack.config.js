@@ -11,9 +11,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
   devtool: 'eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -26,8 +23,9 @@ module.exports = {
         loaders: ['babel'],
         include: path.join(__dirname, 'src')
       },
-      { test: /\.css$/,
-        loader: 'style!css'
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
       },
     ]
   }
