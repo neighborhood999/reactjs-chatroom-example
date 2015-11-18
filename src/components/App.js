@@ -1,7 +1,3 @@
-import '../../assets/css/normalize.css';
-import '../../assets/css/reset.css';
-import '../../assets/css/style.css';
-
 import React, { Component } from 'react';
 import MessageList from './MessageList';
 import Messager from './Messager';
