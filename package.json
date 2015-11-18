@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "reactjs - Simple Chat Room",
   "scripts": {
-    "start": "babel-node server.js",
+    "start": "node server.js",
     "build": "NODE_ENV=production && webpack --config webpack.config.production.js --progress --profile --colors",
     "winBuild": "SET BABEL_ENV=production && webpack --config webpack.config.production.js --progress --profile --colors",
     "lint": "eslint src"
