@@ -7,10 +7,6 @@
 #### | 範例來源：[chatroom](https://github.com/web-seminar/chatroom) |  
 特別感謝 [chentsulin](https://github.com/chentsulin) 同意將範例提供我使用。:pray:
 
-
-**如果沒有安裝 `babel`，請先安裝 `babel`，執行 `npm start` 才不會錯誤：**  
-`$ npm install babel -g`
-
 - - -
 
 ### How To Use

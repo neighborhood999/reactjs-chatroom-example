@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "reactjs - Simple Chat Room",
   "scripts": {
-    "start": "babel-node server.js",
+    "start": "node server.js",
     "lint": "eslint src"
   },
   "user": "Peng-Jie <dean.leehom@gmail.com> (http://github.com/neighborhood999)",
