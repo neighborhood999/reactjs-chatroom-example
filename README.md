@@ -1,4 +1,5 @@
 # Reactjs - Simple Chat Room
+> - _2015.11.21 新增 redux 版本。_
 
 ![](http://i.imgur.com/SpbEtUM.png)
 這個範例是透過 Reactjs 所完成的，模擬一個聊天室的情境，  
