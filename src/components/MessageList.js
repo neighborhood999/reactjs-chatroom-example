@@ -1,22 +1,20 @@
 import React, { Component, PropTypes } from 'react';
-import MessageItem from './MessageItem';
+import Message from './Message';
 
 export default class MessageList extends Component {
   static propTypes = {
-    threads: PropTypes.array.isRequired,
-    index: PropTypes.number.isRequired
+    messages: PropTypes.object.isRequired,
+    currentId: PropTypes.number.isRequired
   }
 
   render() {
-    const { threads, index } = this.props;
-    const messages = threads[index].messages;
+    const { messages, currentId } = this.props;
+    const content = messages[currentId].messages;
     return (
       <div>
-        {messages.map((message, id) => {
+        {content.map((message, id) => {
           return (
-            <MessageItem key={id}
-                         fromMe={message.fromMe}
-                         text={message.text} />
+            <Message key={id} text={message.text} fromMe={message.fromMe} />
           );
         })}
       </div>
