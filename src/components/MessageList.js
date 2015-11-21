@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import MessageItem from './MessageItem';
 
-export default class Footer extends Component {
+export default class MessageList extends Component {
   static propTypes = {
     threads: PropTypes.array.isRequired,
     index: PropTypes.number.isRequired
