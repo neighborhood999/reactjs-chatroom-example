@@ -30,3 +30,6 @@ Open `http://localhost:3000` in your browser.
 
 ### 範例解說
 [PengJie's Blog - Simple Chat Room](http://neighborhood999.github.io/blog/2015/11/05/reactjs-simple-chatRoom/)
+
+### Implement Redux
+[redux - Chat Room](https://github.com/neighborhood999/reactjs-chatroom-example/tree/redux-chatRoom)
