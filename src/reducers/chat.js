@@ -2,7 +2,7 @@ import { SEND_MESSAGE, CHECKOUT_USER } from '../constants/ActionTypes';
 
 const initialState = {
   currentId: 0,
-  friends: [0, 1],
+  friends: [0, 1, 2],
   friendsById: [{
     0: {
       name: 'Elsa',

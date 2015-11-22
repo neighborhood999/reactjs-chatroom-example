@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class UserInput extends Component {
   static propTypes = {
     addMessage: PropTypes.func.isRequired,
+    delaySend: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired
   }
 
@@ -28,13 +29,25 @@ export default class UserInput extends Component {
     }
   }
 
+  handleDelay(e) {
+    const { delaySend, id } = this.props;
+    const text = e.target.value.trim();
+    delaySend(id, text);
+    this.setState({ text: '' });
+  }
+
   render() {
     return (
-      <input type="text"
-             value={this.state.text}
-             className="new-message"
-             onChange={this.handleChange.bind(this)}
-             onKeyDown={this.handleMessage.bind(this)} />
+      <div>
+        <input type="text"
+               value={this.state.text}
+               className="new-message"
+               onChange={this.handleChange.bind(this)}
+               onKeyDown={this.handleMessage.bind(this)} />
+        <button type="button"
+                value={this.state.text}
+                onClick={this.handleDelay.bind(this)}>Delay</button>
+      </div>
     );
   }
 }

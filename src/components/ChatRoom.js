@@ -7,11 +7,12 @@ export default class ChatRoom extends Component {
   static propTypes = {
     chat: PropTypes.object.isRequired,
     checkoutUser: PropTypes.func.isRequired,
-    addMessage: PropTypes.func.isRequired
+    addMessage: PropTypes.func.isRequired,
+    delaySend: PropTypes.func.isRequired
   }
 
   render() {
-    const { chat, chat: { currentId }, checkoutUser, addMessage } = this.props;
+    const { chat, chat: { currentId }, checkoutUser, addMessage, delaySend } = this.props;
     return (
       <div className="chat-app clearfix">
         <div className="chat-app_left">
@@ -28,7 +29,7 @@ export default class ChatRoom extends Component {
             <MessageList messages={chat.friendsById[0]} currentId={currentId} />
           </div>
           <div className="footer">
-            <UserInput addMessage={addMessage} id={currentId} />
+            <UserInput addMessage={addMessage} delaySend={delaySend} id={currentId} />
           </div>
         </div>
       </div>
